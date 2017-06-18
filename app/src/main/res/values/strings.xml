@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Informacion Personal</string>
+    <string name="nombre_completo">Nombre Completo</string>
+    <string name="fecha_nacimiento">Fecha de Nacimiento</string>
+    <string name="telefono">Telefono</string>
+    <string name="email">Email</string>
+    <string name="view_2_titulo">Confirmar Datos</string>
+    <string name="descripcion">Descripcion de Contacto</string>
+    <string name="button_next">Siguiente</string>
+    <string name="lbl_name">Nombre Completo</string>
+    <string name="lbl_fecha_nacimiento">Fecha de Nacimiento</string>
+    <string name="lbl_telefono">Telefono</string>
+    <string name="lbl_email">Email</string>
+    <string name="lbl_descripcion">Descripcion</string>
+    <string name="info_name">Francisco Boche</string>
+    <string name="info_fecha_nacimiento">01/08/1986</string>
+    <string name="info_telefono">88884444</string>
+    <string name="info_email">tufrac@gmail.com</string>
+    <string name="info_descripcion">Esta es una descripcion de ejemplo</string>
+    <string name="button_edit">Editar Datos</string>
+</resources>
