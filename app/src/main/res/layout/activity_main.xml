@@ -76,6 +76,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:text="@string/button_next"
+        android:onClick="loadConfirmation"
         />
 
 </RelativeLayout>
