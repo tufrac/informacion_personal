@@ -1,5 +1,6 @@
 package com.wibej.informacionpersonal;
 
+import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -21,7 +22,9 @@ public class MainActivity extends AppCompatActivity {
         Bundle data = getIntent().getExtras();
         if(data != null){
             String personName = data.getString(getResources().getString(R.string.info_name));
-            String fechaNacimiento = data.getString(getResources().getString(R.string.info_fecha_nacimiento));
+            String fechaNacimientoDay = data.getString(getResources().getString(R.string.info_fecha_nacimiento_day));
+            String fechaNacimientoMonth = data.getString(getResources().getString(R.string.info_fecha_nacimiento_month));
+            String fechaNacimientoYear = data.getString(getResources().getString(R.string.info_fecha_nacimiento_year));
             String telefono = data.getString(getResources().getString(R.string.info_telefono));
             String email = data.getString(getResources().getString(R.string.info_email));
             String descripcion = data.getString(getResources().getString(R.string.info_descripcion));
@@ -31,9 +34,11 @@ public class MainActivity extends AppCompatActivity {
             EditText etTelefono = (EditText) findViewById(R.id.etTelefono);
             EditText etEmail = (EditText) findViewById(R.id.etEmail);
             EditText etDescripcion = (EditText) findViewById(R.id.etDescripcion );
-
+            int fnDay = Integer.parseInt(fechaNacimientoDay);
+            int fnMonth = Integer.parseInt(fechaNacimientoMonth);
+            int fnYear = Integer.parseInt(fechaNacimientoYear);
             etPersonName.setText(personName);
-
+            etFechaNacimiento.updateDate(fnYear, fnMonth, fnDay);
             etTelefono.setText(telefono);
             etEmail.setText(email);
             etDescripcion.setText(descripcion);
@@ -47,14 +52,16 @@ public class MainActivity extends AppCompatActivity {
         EditText telefono = (EditText) findViewById(R.id.etTelefono);
         EditText email = (EditText) findViewById(R.id.etEmail);
         EditText descripcion = (EditText) findViewById(R.id.etDescripcion );
-        int currentDate[] = new int[3];
-        currentDate[0] = fechaNacimiento.getDayOfMonth();
-        currentDate[1] = fechaNacimiento.getMonth();
-        currentDate[2] = fechaNacimiento.getYear();
+
+        String fechaNacimientoDayOfMonth = String.valueOf(fechaNacimiento.getDayOfMonth());
+        String fechaNacimientoMonth = String.valueOf(fechaNacimiento.getMonth());
+        String fechaNacimientoYear = String.valueOf(fechaNacimiento.getYear());
 
 
         siguiente.putExtra(getResources().getString(R.string.info_name), personName.getText().toString());
-        siguiente.putExtra(getResources().getString(R.string.info_fecha_nacimiento), currentDate);
+        siguiente.putExtra(getResources().getString(R.string.info_fecha_nacimiento_day), fechaNacimientoDayOfMonth);
+        siguiente.putExtra(getResources().getString(R.string.info_fecha_nacimiento_month), fechaNacimientoMonth);
+        siguiente.putExtra(getResources().getString(R.string.info_fecha_nacimiento_year), fechaNacimientoYear);
         siguiente.putExtra(getResources().getString(R.string.info_telefono), telefono.getText().toString());
         siguiente.putExtra(getResources().getString(R.string.info_email), email.getText().toString());
         siguiente.putExtra(getResources().getString(R.string.info_descripcion), descripcion.getText().toString());

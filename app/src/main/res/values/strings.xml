@@ -14,6 +14,9 @@
     <string name="lbl_descripcion">Descripcion</string>
     <string name="info_name">Francisco Boche</string>
     <string name="info_fecha_nacimiento">01/08/1986</string>
+    <string name="info_fecha_nacimiento_day">01</string>
+    <string name="info_fecha_nacimiento_month">08</string>
+    <string name="info_fecha_nacimiento_year">1986</string>
     <string name="info_telefono">88884444</string>
     <string name="info_email">tufrac@gmail.com</string>
     <string name="info_descripcion">Esta es una descripcion de ejemplo</string>
